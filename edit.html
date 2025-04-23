@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>식단 메뉴 작성</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .edit-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .day-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .menu-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .menu-item input {
+            flex: 1;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .add-item-btn, .remove-item-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .add-item-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .remove-item-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .save-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .save-btn:hover {
+            background-color: #1976D2;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-container">
+        <a href="index.html" class="nav-link">← 메뉴 보기로 돌아가기</a>
+        <h1>식단 메뉴 작성</h1>
+        <form id="menuForm" class="menu-form">
+            <div class="day-section" id="monday">
+                <h2>월요일</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <input type="text" placeholder="메뉴 항목 추가" required>
+                        <button type="button" class="add-item-btn">+</button>
+                        <button type="button" class="remove-item-btn">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="day-section" id="tuesday">
+                <h2>화요일</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <input type="text" placeholder="메뉴 항목 추가" required>
+                        <button type="button" class="add-item-btn">+</button>
+                        <button type="button" class="remove-item-btn">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="day-section" id="wednesday">
+                <h2>수요일</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <input type="text" placeholder="메뉴 항목 추가" required>
+                        <button type="button" class="add-item-btn">+</button>
+                        <button type="button" class="remove-item-btn">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="day-section" id="thursday">
+                <h2>목요일</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <input type="text" placeholder="메뉴 항목 추가" required>
+                        <button type="button" class="add-item-btn">+</button>
+                        <button type="button" class="remove-item-btn">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="day-section" id="friday">
+                <h2>금요일</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <input type="text" placeholder="메뉴 항목 추가" required>
+                        <button type="button" class="add-item-btn">+</button>
+                        <button type="button" class="remove-item-btn">-</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="save-btn">메뉴 저장</button>
+        </form>
+    </div>
+    <script src="edit.js"></script>
+</body>
+</html> 
